@@ -1,6 +1,6 @@
 import './styles/index.scss'
-import Modal from './pages/Modal/Modal';
-import { PROTAL_LOCATION } from './untils/constants'
+import Modal from './components/Modal/Modal';
+import { PROTAL_LOCATION } from './constant/constants'
 import { useRef, useEffect, useState } from 'react'
 
 
@@ -27,7 +27,7 @@ function App() {
       setHidden(false)
     }
 
-    let childrenNode = Array.prototype.slice.call(button.current.children)
+    let childrenNode = Array.from(button.current.children)
     childrenNode.forEach((item) => {
       item.addEventListener('click', (e) => {
         e.stopPropagation()
@@ -49,9 +49,7 @@ function App() {
   return (
     <div className="App">
       {hidden && (
-        <Modal bounding={bounding} position={position}>
-         aaaaaaaa
-        </Modal>
+        <Modal bounding={bounding} position={position}></Modal>
       )}
       <div className="list__button" ref={button}>
         <button className={PROTAL_LOCATION.TOP}>Top</button>

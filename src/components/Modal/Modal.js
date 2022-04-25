@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
 import { useRef, useEffect, useState } from 'react'
-import locationItem from '../../untils/locationItem';
+import locationItem from '../../constant/locationItem';
 import Anh from './Anh.jpg'
 
 function Modal(props) {

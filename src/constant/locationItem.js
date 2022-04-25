@@ -1,28 +1,28 @@
-import {  NUMBER_FIFTY, NUMBER_ONEHUNDERD, PROTAL_LOCATION } from './constants'
+import {  PROTAL_LOCATION } from './constants'
 
 const locationItem = (location, bounding, boundItem) => {
     return location === PROTAL_LOCATION.TOP
     ? {
-        top: bounding.top - boundItem.height - NUMBER_FIFTY,
+        top: bounding.top - boundItem.height ,
         left: bounding.left + (bounding.width - boundItem.width) / 2,
         position: 'relative',
       }
     : location === PROTAL_LOCATION.BOTTOM
     ? {
-        top: bounding.top + bounding.height + NUMBER_FIFTY,
+        top: bounding.top + bounding.height,
         left: bounding.left + (bounding.width - boundItem.width) / 2,
         position: 'relative',
       }
     : location === PROTAL_LOCATION.RIGHT
     ? {
         top: bounding.top,
-        right: -bounding.right - NUMBER_ONEHUNDERD,
+        right: -bounding.right,
         position: 'relative',
       }
     : location === PROTAL_LOCATION.LEFT
     ? {
         top: bounding.top,
-        left: bounding.left - boundItem.width - NUMBER_ONEHUNDERD,
+        left: bounding.left - boundItem.width,
         position: 'relative',
       }
     : null
